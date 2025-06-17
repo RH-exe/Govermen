@@ -1,0 +1,21 @@
+.fondo-opaco {
+  position: relative;
+  background-image: url('../assets/fondo-Contactanos.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.fondo-opaco::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.fondo-opaco-contenido {
+  position: relative;
+  z-index: 2;
+  color: black;
+  text-align: center;
+}

@@ -1,0 +1,29 @@
+.fondo1 {
+  position: relative;
+  background-image: url('../assets/fondo-Sucamec.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.fondo1::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 1;
+}
+
+.fondo2{
+  position: relative;
+  z-index: 2;
+  color: black;
+  text-align: center;
+}
+.stroke-text {
+  -webkit-text-stroke: 2px black;
+}
+@media screen and (max-width: 768px) {
+  .stroke-text {
+    -webkit-text-stroke: 2px white;
+  }
+}
