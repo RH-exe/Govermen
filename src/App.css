@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 
+body {
+  overflow-x: hidden;
+}
+
 .App {
   text-align: center;
 }
@@ -31,11 +35,47 @@
 }
 
 .titulo{
-  @apply text-white w-[35rem] text-[2rem] font-bold font-georama;
+  @apply text-white md:w-[35rem]  text-[1.4rem] md:text-[2rem] font-bold font-georama;
 }
 
+
 .subtitulo{
-  @apply text-rojo text-[1rem] font-bold ;
+  @apply text-rojo text-[14px] md:text-[1rem] font-bold ;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* Carrusel */
+.custom-bullet {
+    width: 30px !important;
+    height: 12px !important;
+    background: rgba(255, 255, 255, 0.3) !important;
+    opacity: 1 !important;
+    margin: 0 6px !important;
+    border-radius: 15px !important;
+    transition: all  ease !important;
+    transition: 2s;
+}
+
+.custom-bullet-active {
+    background: #881c1b !important;
+    transform: scale(1.2) !important;
+}
+
+:global(.swiper-pagination) {
+    bottom: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: auto !important;
+}
+
+/* Quitar flechas en Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 @keyframes App-logo-spin {

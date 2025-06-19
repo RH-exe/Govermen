@@ -47,7 +47,7 @@ export default function FAQAccordion() {
             <span className="text-2xl font-light text-white ">{openIndex === index ? '−' : '+'}</span>
           </button>
           {openIndex === index && (
-            <div className="pb-4 pr-6 text-gray-700 text-sm text-white">
+            <div className="pb-4 pr-6 text-sm text-white">
               {faq.answer}
             </div>
           )}

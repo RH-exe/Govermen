@@ -11,8 +11,8 @@ import img5 from "../assets/img-serv-5.jpg";
 import img6 from "../assets/img-serv-6.jpg";
 
 const contenedor ="flex flex-col items-center justify-center";
-const contenedorImg = "flex justify-center items-center h-[18rem] w-[25rem]";
-const Img ="rounded-[20px] w-full h-full object-cover";
+const contenedorImg = "flex justify-center items-center w-full max-w-[25rem] aspect-[4/3]";
+const Img = "rounded-[20px] w-full h-full object-cover transition duration-300 ease-in hover:scale-110";
 const contenedorTexto= "h-[3rem] p-[1rem]";
 const texto ="text-center w-[17.5rem] text-[1.5rem] text-white";
 
@@ -76,7 +76,10 @@ const Servicios = () =>{
                     </div>
                 </div>
             </div>
-            <Clientes/>
+
+            <div className="md:h-[30rem] md:pt-20 ">
+                <Clientes/>
+            </div>
             <Contacto/>
         </div>
     )

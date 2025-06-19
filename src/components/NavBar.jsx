@@ -9,7 +9,7 @@ const NavBar = ()=>{
     const location = useLocation();
 
 
-    const navItems =[
+    const NavItems =[
         {name:"Inicio", path:"/"},
         {name:"Servicios", path:"/Servicios"},
         {name:"Nosotros", path:"/Nosotros"},
@@ -17,8 +17,8 @@ const NavBar = ()=>{
     ];
 
     return(
-        <header className="fixed top-0 left-0 right-0 shadow-md z-50 bg-white shadow-md ">
-            <div className="flex justify-between h-16 items-center px-4 ">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md ">
+            <div className="flex justify-around gap-x-96 h-16 items-center px-4 ">
                 <Link to="/">
                     <img src={logo} className="h-[3rem] cursor-pointer" alt="Logo"/>
                 </Link>
@@ -31,7 +31,7 @@ const NavBar = ()=>{
                 
                 {/* Menu */}
                 <nav className="hidden md:flex space-x-10 text-gray-700 font-medium font-gabarito">
-                    {navItems.map((item) =>(
+                    {NavItems.map((item) =>(
                         <Link key={item.name}
                         to={item.path}
                         className={`hover:text-tojo ${
@@ -45,7 +45,7 @@ const NavBar = ()=>{
             
             {isOpen && (
                 <div className="md:hidden px-4 pb-4 pt-2 bg-white space-y-2 shadow-md">
-                    {navItems.map((item)=>(
+                    {NavItems.map((item)=>(
                         <Link key={item.name}
                         to={item.path}
                         onClick={() => setIsOpen(false)}
