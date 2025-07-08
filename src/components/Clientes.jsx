@@ -11,7 +11,7 @@ const clientes =()=>{
     return (
     <div className='bg-black md:h-[20rem] flex flex-col justify-center'>
         <div>
-            <p className='font-bold text-white text-center text-[1.5rem] my-[2rem] text-figtree'>NUESTROS CLIENTES EMPRESARIALES</p>
+            <p className='font-bold text-white text-center text-4xl my-[2rem] text-figtree'>NUESTROS CLIENTES EMPRESARIALES</p>
         </div>
         <div className='flex flex-col lg:flex-row md:justify-between gap-y-10 md:gap-y-0 md:gap-x-4 md:mx-[8rem] items-center align-center'>
             <motion.img src={img_ecore} className={Img} initial={{scale:0.8, opacity:0}} whileInView={{scale:1, opacity:1 }} transition={{duration:1, ease:'easeOut', delay:0}} viewport={{once: true, amount:0.8}} ></motion.img>

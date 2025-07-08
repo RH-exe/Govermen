@@ -22,9 +22,13 @@ const Nosotros =() =>{
 
             <div className=" p-[4rem] px-[25%]">
                 <motion.h2 className={titulo} initial={{y:60, opacity:0}} whileInView={{opacity:1, y:1}} transition={{duration:1, ease:'easeOut'}} viewport={{once:true, amount:1}} >¿Quiénes Somos?</motion.h2>
-                <motion.p initial={{x:0.5, opacity:0}} whileInView={{scale:1, opacity:1}} transition={{duration:1.5, ease:'easeOut'}} viewport={{once:true, amount:0.8}}  className=" text-white text-[1rem] leading-loose text-gabarito text-start">En Govermen, somos una empresa especializada en seguridad integral, resguardo y vigilancia, comprometida con la protección de personas, bienes e instalaciones.<br/>
+                <motion.p initial={{x:0.5, opacity:0}} whileInView={{scale:1, opacity:1}} transition={{duration:1.5, ease:'easeOut'}} viewport={{once:true, amount:0.8}}  className=" text-white text-[1rem] leading-loose text-gabarito text-start hidden md:block">En Govermen, somos una empresa especializada en seguridad integral, resguardo y vigilancia, comprometida con la protección de personas, bienes e instalaciones.<br/>
                     Nuestra misión es brindar tranquilidad, confianza y eficiencia, a través de soluciones personalizadas que se adaptan a las necesidades de cada cliente.<br/>
                     Contamos con un equipo altamente capacitado en seguridad preventiva, vigilancia física, control de accesos, monitoreo y patrullaje, preparado para actuar con profesionalismo y rapidez ante cualquier eventualidad.
+                </motion.p>
+                    
+                <motion.p initial={{x:0.5, opacity:0}} whileInView={{scale:1, opacity:1}} transition={{duration:1.5, ease:'easeOut'}} viewport={{once:true, amount:0.8}} className="text-white text-[1rem] leading-loose text-gabarito text-start block md:hidden w-[130%]">
+                    Nuestra misión en Govermen es brindar tranquilidad, confianza y eficiencia a través de un servicio personalizado que se adapta a las necesidades de cada cliente. Contamos con un equipo capacitado y equipado para enfrentar cualquier circunstancia, siempre listo para actuar con profesionalismo y rapidez ante cualquier eventualidad
                 </motion.p>
                 <Link to="/Contacto">
                     <button className={boton}>Contáctanos</button>
@@ -32,7 +36,7 @@ const Nosotros =() =>{
             </div>
 
             <h2 className={titulo}>Valores Corporativos</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 px-[4rem] gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-[40%_40%] px-[4rem] gap-[20%]">
                 <div className="flex items-center ">
                     <ul className="text-white text-center md:text-start md:text-[2rem] text-[1.5rem] font-semibold md:font-bold leading-[5rem] w-[30rem] font-georama">
                         <li>Compromiso</li>
@@ -42,23 +46,22 @@ const Nosotros =() =>{
                         <li>profesionalismo</li>
                     </ul>
                 </div>
-                <div className="flex justify-center">
-                    <div className="md:w-[30rem] md:h-[30rem] w-[15rem] h-auto flex justify-center items-center">
-                        <img src={img1} className=" w-full h-full rounded-[20px]" />
+                <div className="flex justify-center ">
+                    <div className="md:w-full md:h-full w-[15rem] h-auto flex justify-center items-center">
+                        <img src={img1} className=" w-full h-full rounded-[20px] hidden md:block" />
                     </div>
                 </div>
             </div>
 
-            <div>
                 <h2 className={titulo}>Nuestro Proposito</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 p-[4rem] gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-[40%_40%] px-[4rem] gap-[20%]">
                     <div className="flex justify-center">
-                        <div className="md:w-[30rem] md:h-[30rem] w-[15rem] h-auto grid grid-flow-row">
+                        <div className="md:w-full md:h-full w-[15rem] h-auto grid grid-flow-row">
                             <img src={img2} className="w-full h-full object-cover rounded-[20px]" />
                         </div>
                     </div>
 
-                    <div className="lg:w-[30rem] w-[20] w- flex justify-center items-center">
+                    <div className="lg:w-[30rem] w-[30] w- flex justify-center items-center font-georama">
                         <span className="text-white text-start md:text-[20px] text-5 leading-[3rem] font-gabarito hidden lg:inline">En Govermen, nuestro propósito es proteger los bienes y la tranquilidad de nuestros clientes, ofreciendo servicios de seguridad confiables, profesionales y adaptados a cada necesidad.<br/>
                         Trabajamos día a día para construir entornos más seguros, donde las personas puedan desarrollarse con confianza, sabiendo que cuentan con un equipo vigilante, comprometido y capacitado.
                         </span>
@@ -68,9 +71,8 @@ const Nosotros =() =>{
                     </div>
 
                 </div>
-            </div>
 
-            <div className="fondo1 py-[2rem]">
+            <div className="fondo1 mt-[5rem]">
                 <div className="fondo2 ">
                     <p className="order-2 md:order-none stroke-text md:text-white uppercase font-bold text-rojo text-[3rem] py-4 md:py-[3rem] [word-spacing:10px] ">
                         autorización de sucamec
@@ -80,7 +82,7 @@ const Nosotros =() =>{
                             <img src={logo} className="rounded-r-[40px]" />
                         </div>
                         <div className="bg-white rounded-l-[40px] relative z-10 w-full h-full flex justify-start items-center">
-                                <p className="text-[20px] text-left [word-spacing:6px] md:font-bold leading-[2rem] p-[2rem] font-gabarito">
+                                <p className="text-[20px] text-left [word-spacing:6px] md:w-[70%] md:font-bold leading-[2rem] p-[2rem] font-gabarito">
                                 GOVERMEN S.A.C. cuenta con autorización oficial de SUCAMEC (Expediente N.º 202300306385) para prestar
                                 servicios de vigilancia privada con armas de fuego en Lima y Callao, conforme al Decreto Legislativo N.° 1213, con
                                 vigencia hasta el 17 de octubre de 2028. La empresa cumple con todos los requisitos legales y de seguridad exigidos por la normativa vigente.
@@ -92,7 +94,7 @@ const Nosotros =() =>{
                     </div>
                 </div>
             </div>
-            <div className="md:h-[30rem] md:pt-20">
+            <div className="md:h-[30rem]">
                 <Clientes/>
             </div>
         </div>

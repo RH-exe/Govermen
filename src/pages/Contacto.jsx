@@ -95,7 +95,7 @@ const Contacto =()=>{
                         <button
                         onClick={() => {cambiarMapa("admin"); setNombre(nameAdmin)}}
                         className={`text-white bg-black hover:bg-rojo rounded-t-md border-l border-t border-r border-white border-b-0 hover:border-b hover:border-white px-6 py-2 transition-all duration-300 ${
-                            activo === "admin" ? "border-b border-white" : ""
+                            activo === "admin" ? "bg-rojo" : ""
                         }`}
                         >
                         OF. Administrativa
@@ -103,7 +103,7 @@ const Contacto =()=>{
                         <button
                         onClick={() => {cambiarMapa("principal"); setNombre(namePrincipal)}}
                         className={`text-white bg-black hover:bg-rojo rounded-t-md border-l border-t border-r border-white border-b-0 hover:border-b hover:border-white px-6 py-2 transition-all duration-300 ${
-                            activo === "principal" ? "border-b border-white" : ""
+                            activo === "principal" ? " bg-rojo" : ""
                         }`}
                         >
                         OF. Principal

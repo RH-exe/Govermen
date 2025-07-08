@@ -35,12 +35,12 @@ body {
 }
 
 .titulo{
-  @apply text-white md:w-[35rem]  text-[1.4rem] md:text-[2rem] font-bold font-georama;
+  @apply text-white md:w-[35rem]  text-3xl md:text-4xl font-bold font-georama 2xl:text-5xl;
 }
 
 
 .subtitulo{
-  @apply text-rojo text-[14px] md:text-[1rem] font-bold ;
+  @apply text-rojo text-[14px] md:text-2xl font-bold 2xl:text-3xl;
 }
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
@@ -71,6 +71,12 @@ input[type=number]::-webkit-outer-spin-button {
     left: 50% !important;
     transform: translateX(-50%) !important;
     width: auto !important;
+}
+@media (max-width: 900px){
+  .custom-bullet{
+    width: 12px !important;
+    height: 8px !important;
+  }
 }
 
 /* Quitar flechas en Firefox */
