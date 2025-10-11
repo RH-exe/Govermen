@@ -13,7 +13,7 @@ import '../styles/Nosotros.css';
 const boton="bg-rojo text-white h-[2.5rem] rounded-[8px] w-[50%] md:w-[23%] flex items-center justify-center mx-auto mt-[2rem] font-gabarito";
 const titulo ="text-center text-white text-[2.5rem] md:text-[4rem] font-bold font-geist py-8";
 
-const Nosotros =() =>{
+function Nosotros() {
     return (
         <div className="bg-black mt-10">
             <div className="h-[20rem] w-auto md:h-[45rem] flex justify-center items-center">
@@ -78,17 +78,20 @@ const Nosotros =() =>{
                         autorización de sucamec
                     </p>
                     <div className="grid md:grid-cols-[30%_60%] grid-cols-1 md:h-[25rem] gap-[10%] mb-[4rem]">
-                        <div className="bg-white rounded-r-[40px] w-full h-full flex justify-center md:flex-self--end ">
-                            <img src={logo} className="rounded-r-[40px]" />
+                        <div className="bg-white rounded-r-[40px] w-auto h-auto flex justify-center md:flex-self--end ">
+                            <img src={logo} className=" rounded-r-[40px]" />
                         </div>
                         <div className="bg-white rounded-l-[40px] relative z-10 w-full h-full flex justify-start items-center">
-                                <p className="text-[20px] text-left [word-spacing:6px] md:w-[70%] md:font-bold leading-[2rem] p-[2rem] font-gabarito">
-                                GOVERMEN S.A.C. cuenta con autorización oficial de SUCAMEC (Expediente N.º 202300306385) para prestar
-                                servicios de vigilancia privada con armas de fuego en Lima y Callao, conforme al Decreto Legislativo N.° 1213, con
+                                <p className="hidden md:block text-[20px] text-left [word-spacing:6px] md:font-bold leading-[2rem] p-[2rem] font-gabarito">
+                                GOVERMEN S.A.C. cuenta con autorización oficial de SUCAMEC, para la modalidad de Servicios de vigilancia privada con armas
+                                de fuego en Lima y Callao deacuerdo con en número de resolucón (Informe Legal N° 01462-2023-SUCAMEC-GSSP), por otra parte tambien contamos con la autorizacion
+                                para el servicio de Proteccion Personal de acuerdo con el número de resolucón (Informe Legal N°01486-2023-SUCAMEC-GSSP). Conforme al Decreto Legislativo N.° 1213, con
                                 vigencia hasta el 17 de octubre de 2028. La empresa cumple con todos los requisitos legales y de seguridad exigidos por la normativa vigente.
                                 </p>
-                                <p>
-
+                                <p className="block md:hidden text-left font-gabarito pl-6 ">
+                                    GOVERMEN S.A.C. cuenta con autorización oficial de SUCAMEC, para la modalidad de Servicios de vigilancia privada con armas
+                                    de fuego en Lima y Callao deacuerdo con en número de resolucón (Informe Legal N° 01462-2023-SUCAMEC-GSSP) y para el servicio
+                                    de Proteccion Personal de acuerdo con el número de resolucón (Informe Legal N°01486-2023-SUCAMEC-GSSP). Con vigencia hasta el 17 de octubre de 2028.
                                 </p>
                         </div>
                     </div>
@@ -100,4 +103,4 @@ const Nosotros =() =>{
         </div>
     )
 }
-export default Nosotros
+export default Nosotros;

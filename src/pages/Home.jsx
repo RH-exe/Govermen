@@ -44,7 +44,7 @@ const servicio = [
   },
 ]
 
-const Home = ()=>{
+function Home(){
     return (
 
     <div className=" bg-black max-w-auto overflow-hidden">
@@ -109,4 +109,5 @@ const Home = ()=>{
     </div>
     )
 }
+
 export default Home;

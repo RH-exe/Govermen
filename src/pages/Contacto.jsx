@@ -13,7 +13,7 @@ const namePrincipal = "Calle Los Tulipanes Mz P lote 8-B, Puente Piedra 15122";
 const nameAdmin = "Av. Industrial N° 3233 - Urb. Industrial Panameric. Norte - Independencia, Lima.";
 
 
-const Contacto =()=>{
+function Contacto(){
     const form = useRef();
     
     const [telefono, setTelefono] = useState("");
@@ -114,8 +114,8 @@ const Contacto =()=>{
             setLoading(false);
     };
 
-    
-    
+
+
 
     return(
         <div className='bg-black mt-10'>
@@ -194,4 +194,4 @@ const Contacto =()=>{
         </div>
     )
 }
-export default Contacto
+export default Contacto;

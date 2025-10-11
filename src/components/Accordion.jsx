@@ -16,7 +16,7 @@ const faqs = [
     answer: ['Lima y Callao'],
   },
   {
-    question: '¿Qué rubros son los abarca nuestro servicio?',
+    question: '¿Qué rubros son los que abarca nuestro servicio?',
     answer: ['Industrial',
       'Metalúrgico',
     ],

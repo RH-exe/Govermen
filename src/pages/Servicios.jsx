@@ -42,8 +42,7 @@ const service = [
         texto: 'Supervisión remota y respuesta rápida',
     },
 ]
-
-const Servicios = () =>{
+const Servicios=()=>{
     return (
         <div className="bg-black mt-10">
             <div className="flex flex-col items-center md:h-[14rem] pt-[3rem]">
