@@ -17,12 +17,12 @@ function App() {
         <NavBar/>
         <ScrollTop/>
         <Routes >
-          <Route path="" element={<Home/>} />
+          <Route path="/" element={<Home/>} />
           <Route path="/servicios" element={<Servicios/>} />
-          <Route path='/Nosotros' element={<Nosotros/>} />
+          <Route path='/nosotros' element={<Nosotros/>} />
           <Route path='/contacto' element={<Contacto/>} />
-          <Route path='/Error' element={<ErrorPage/>} />
-          <Route path='/*' element={<Navigate to= "ErrorPage"/>} />
+          <Route path='/error' element={<ErrorPage/>} />
+          <Route path='/*' element={<Navigate to= '/error'/>} />
         </Routes>
         <Footer/>
       </div>
