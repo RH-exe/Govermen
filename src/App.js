@@ -7,7 +7,6 @@ import Servicios from './pages/Servicios.jsx';
 import Nosotros from './pages/Nosotros.jsx';
 import Contacto from './pages/Contacto.jsx';
 import ScrollTop from './components/ScrollToTop.jsx';
-import ErrorPage from './pages/ErrorPage.jsx';
 
 
 function App() {
@@ -21,8 +20,7 @@ function App() {
           <Route path="/servicios" element={<Servicios/>} />
           <Route path='/nosotros' element={<Nosotros/>} />
           <Route path='/contacto' element={<Contacto/>} />
-          <Route path='/error' element={<ErrorPage/>} />
-          <Route path='/*' element={<Navigate to= '/error'/>} />
+          <Route path='/*' element={<Navigate to= '/'/>} />
         </Routes>
         <Footer/>
       </div>

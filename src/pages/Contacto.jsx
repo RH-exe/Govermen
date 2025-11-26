@@ -7,11 +7,8 @@ import img1 from '../assets/img-Contacto.jpg';
 import { Timer } from 'lucide-react';
 
 const UbiPrincipal = { lat: -11.823387402158415, lng: -77.10523711485514 };
-const UbiAdmin = { lat: -11.999923905734665, lng: -77.05825548226619 };
 
-const namePrincipal = "Calle Los Tulipanes Mz P lote 8-B, Puente Piedra 15122";
-const nameAdmin = "Av. Industrial N° 3233 - Urb. Industrial Panameric. Norte - Independencia, Lima.";
-
+const namePrincipal =  "Calle Los Tulipanes Mz P lote 8-B, Puente Piedra 15122";
 
 function Contacto(){
     const form = useRef();
@@ -23,24 +20,10 @@ function Contacto(){
 
     const [loading, setLoading] = useState(false);
 
-    const [center, setCenter] = useState(UbiAdmin);
-    const [activo, setActivo] = useState("admin");
-
-    const [nombre, setNombre] = useState(nameAdmin);
 
     const { isLoaded, loadError } = useJsApiLoader({
         googleMapsApiKey: process.env.REACT_APP_GOOGLE,
     });
-
-    const cambiarMapa = (tipo) => {
-        if (tipo === "admin") {
-        setCenter(UbiAdmin);
-        setActivo("admin");
-        } else {
-        setCenter(UbiPrincipal);
-        setActivo("principal");
-        }
-    };
 
     if (loadError) return <p>Error cargando el mapa 🧨</p>;
 
@@ -114,16 +97,13 @@ function Contacto(){
             setLoading(false);
     };
 
-
-
-
     return(
         <div className='bg-black mt-10'>
                 <div className='flex  justify-center  '>
                     <div className='grid grid-cols-1 md:grid-cols-[60%_30%] py-[5rem] w-full justify-items-center '>
                         <div className='bg-white rounded-br-[35px] rounded-tl-[35px] '>
                                 <form ref={form} onSubmit={enviarCorreo} className='p-[2rem] max-w-[600px] transition duration-300 ease-in hover:scale-105'>
-                                    <h2 className='text-rojo text-[2rem] pb-[1rem] font-bold'>Contactanos</h2>
+                                    <h2 className='text-rojo text-[2rem] pb-[1rem] font-bold'>Contáctanos</h2>
                                     <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 '>
                                         <input name='name' type='text' placeholder='Nombres' required className='border p-1'/>
                                         <input name='Lastname' type='text' placeholder='Apellidos' required className='border p-1'/>
@@ -152,21 +132,9 @@ function Contacto(){
                 </div>
 
                 <div className="relative w-full">
-                    {/* Botones por encima del <hr> */}
                     <div className="relative z-10 flex justify-center gap-10">
-                        <button
-                        onClick={() => {cambiarMapa("admin"); setNombre(nameAdmin)}}
-                        className={`text-white bg-black hover:bg-rojo rounded-t-md border-l border-t border-r border-white border-b-0 px-6 py-2 transition-all duration-300 ${
-                            activo === "admin" ? "bg-rojo" : ""
-                        }`}
-                        >
-                        OF. Administrativa
-                        </button>
-                        <button
-                        onClick={() => {cambiarMapa("principal"); setNombre(namePrincipal)}}
-                        className={`text-white bg-black hover:bg-rojo rounded-t-md border-l border-t border-r border-white border-b-0  px-6 py-2 transition-all duration-300 ${
-                            activo === "principal" ? " bg-rojo" : ""
-                        }`}
+                        <button                        
+                        className={`text-white bg-black bg-rojo rounded-t-md border-l border-t border-r border-white border-b-0  px-6 py-2 transition-all duration-300 cursor-default`}
                         >
                         OF. Principal
                         </button>
@@ -179,15 +147,15 @@ function Contacto(){
 
                 
             <div className="pb-10 md:h-[40rem] flex flex-col items-center">
-                <h2 className="text-white p-[2rem] tracking-wider text-[20px] md:p-8">Ubicación: {nombre}
+                <h2 className="text-white p-[2rem] tracking-wider text-[20px] md:p-8">Ubicación: {namePrincipal}
                 </h2>
                 <div className="h-[20rem] md:h-[30rem] w-[80%] rounded-[40px] border-4 border-rojo overflow-hidden">
                     <GoogleMap
                     mapContainerClassName="w-full h-full"
-                    center={center}
+                    center={UbiPrincipal}
                     zoom={15}
                     >
-                    <Marker position={center} />
+                    <Marker position={UbiPrincipal} />
                     </GoogleMap>
                 </div>
             </div>

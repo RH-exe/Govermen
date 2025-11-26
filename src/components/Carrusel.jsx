@@ -28,7 +28,7 @@ const Carrusel = () => {
             fondo: fondo1,
         },
         {
-            titulo: "Proteccion personal o Resguardo",
+            titulo: "Protección personal o Resguardo",
             texto: "Ofrecemos servicios de protección y resguardo personal con agentes especializados, entrenados en evaluación de riesgos y respuesta táctica, garantizando la seguridad y tranquilidad de nuestros clientes en todo momento.",
             img: null,
             fondo: fondo2,

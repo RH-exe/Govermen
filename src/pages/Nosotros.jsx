@@ -53,7 +53,7 @@ function Nosotros() {
                 </div>
             </div>
 
-                <h2 className={titulo}>Nuestro Proposito</h2>
+                <h2 className={titulo}>Nuestro Propósito</h2>
                 <div className="grid grid-cols-1 md:grid-cols-[40%_40%] px-[4rem] gap-[20%]">
                     <div className="flex justify-center">
                         <div className="md:w-full md:h-full w-[15rem] h-auto grid grid-flow-row">
