@@ -1,6 +1,7 @@
 {
   "name": "reactpixabay",
   "version": "0.1.0",
+  "homepage": "/govermen",
   "private": true,
   "dependencies": {
     "@react-google-maps/api": "^2.20.6",

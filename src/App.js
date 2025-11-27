@@ -11,7 +11,7 @@ import ScrollTop from './components/ScrollToTop.jsx';
 
 function App() {
   return (
-    <BrowserRouter basename='/Govermen.com'>
+    <BrowserRouter basename='/govermen'>
       <div className='App'>
         <NavBar/>
         <ScrollTop/>
